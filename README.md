@@ -137,7 +137,7 @@ npm install
 #creo migration
 php artisan make:migration create_nome_tabella_table
 php artisan make:migration update_users_table --table=users
-php artisan make:migration add_phone_number_to_users_table  --table=users
+php artisan make:migration add_phone_number_to_projects_table  --table=users
 
 #lanciare migration
 php artisan migrate

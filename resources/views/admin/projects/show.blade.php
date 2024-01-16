@@ -3,6 +3,7 @@
     <section class="container">
         <h1>{{ $project->title }}</h1>
         <p>{!! $project->body !!}</p>
+        <h6><a href="{{ $project->url }}">Github</a></h6>
         <span>{{ $project->category ? $project->category->name : 'Uncategorized' }}</span>
         <img class="w-25 d-block mb-5" src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->title }}">
 

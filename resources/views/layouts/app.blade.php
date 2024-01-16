@@ -55,6 +55,10 @@
                             <a class="nav-link {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}"
                                 href="{{ route('admin.projects.index') }}">Projects</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.categories.index' ? 'active' : '' }}"
+                                href="{{ route('admin.categories.index') }}">Categories</a>
+                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

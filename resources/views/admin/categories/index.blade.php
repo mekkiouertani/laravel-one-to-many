@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
-    <section class="container">
-        <h2>Categorys</h2>
+    <section class="container mt-5">
+        <h2>Categories</h2>
 
         @if (!empty(session('message')))
             <div class="alert alert-success" role="alert">
@@ -11,9 +11,9 @@
         <table class="table table table-striped mt-5">
             <thead>
                 <tr>
-                    <th scope="col"></th>
+                    <th scope="col" class="w-25">Visualizza i progetti</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Type</th>
+                    {{--  <th scope="col">Actions</th> --}}
                 </tr>
             </thead>
             <tbody>
@@ -25,13 +25,13 @@
                             </a>
                         </th>
                         <td> {{ $category->name }}</td>
-                        <td> <a href="{{ route('admin.categories.edit', $category->slug) }}"
-                                class="btn btn-warning">Edit</a>
+                        <td> {{-- <a href="{{ route('admin.categories.edit', $category->slug) }}"
+                                class="btn btn-warning">Edit</a> --}}
                             <form action="{{ route('admin.categories.destroy', $category->slug) }}" method="POST"
                                 class="d-inline">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-danger cancel-button">Delete</button>
+                                {{--    <button type="submit" class="btn btn-danger cancel-button">Delete</button> --}}
                             </form>
                         </td>
                     </tr>
