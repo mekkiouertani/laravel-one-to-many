@@ -38,8 +38,10 @@
                     @endforeach
                 </select>
                 {{-- PREVIEW  --}}
-                <div>
-                    <img id="uploadPreview" width="100" src="https://via.placeholder.com/300x200" alt="preview">
+                <div class="mt-5">
+                    <img id="uploadPreview" width="100"
+                        src="{{ old('image', $project->image ? asset('storage/' . $project->image) : 'https://via.placeholder.com/300x200') }}"
+                        alt="preview">
                 </div>
                 {{-- IMAGE --}}
                 <div class="mb-3">
